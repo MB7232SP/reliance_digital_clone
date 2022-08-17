@@ -1,11 +1,4 @@
-// import {navbar} from "../component/navbar.js "
-// import {footer} from "../component/footer.js"
 
-// let navMain=document.getElementById("navMain")
-// navMain.innerHTML=navbar()
-
-// let footerMain=document.getElementById("footerMain")
-// footerMain.innerHTML=footer()
 import {navtop,main_navbaar,NEW_NAVTOP,getData,show_uersIn_nav} from "../components/navbaar.js"
 let navtopelimet = document.getElementById("top_find_store_div")
 navtopelimet.innerHTML = NEW_NAVTOP();
@@ -128,13 +121,22 @@ function incItemCount(id){
     window.addEventListener("load",displayCartObj(cartArr,listProductsDiv),calculateTotal())
 }
 function decItemCount(id){
-    console.log("id="+id)
+    let flag = false;
     cartArr.forEach(ele => {
         if(ele.id==id){
             ele.itemCount--
-            console.log(ele.itemCount)
+            if(ele.itemCount<1) {
+                flag= true;
+            };
         }
     });
+    if(flag==true){
+        let filterdarr = cartArr.filter((element)=>{
+            return element.id!=id;
+        })
+        localStorage.setItem("Cart",JSON.stringify(filterdarr));
+        window.location.reload();
+    }
    window,addEventListener("load",displayCartObj(cartArr,listProductsDiv),calculateTotal())  
 }
 function removeProductFromCart(index){

@@ -63,7 +63,7 @@ const goto_otp_verification = (ele)=>{
 // register user functions
 const postData_toserver = async(obj)=>{
    try {
-    let url = `http://localhost:3000/profile`
+    let url = `https://reliance-create.herokuapp.com/profile`
      let res = await fetch(url,{
         method:"POST",
         body:JSON.stringify(obj),
@@ -139,7 +139,7 @@ const checkToLoginServer = async()=>{
     try {
         let input_number = input_numberElement.value;
         if(input_number.length==10){
-            let data = await getData(`http://localhost:3000/profile`);
+            let data = await getData(`https://reliance-create.herokuapp.com/profile`);
             checkDatabase(input_number,data);
         }else{
             alert("wrong mobile number")

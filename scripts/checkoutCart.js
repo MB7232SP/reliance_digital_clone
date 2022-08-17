@@ -62,8 +62,7 @@ const displayDeliveryOptions = ()=>{
     shipping_picode_clickDiv.style.display = "block"
 }
 chooseShippingAddress.addEventListener("click",function(){displayDeliveryOptions()})
-// let choosePickupStore=document.getElementById("choosePickupStore")
-// choosePickupStore.addEventListener("click",function(){displayDeliveryOptions(flag=false,displayAdrress_pincodeHere)})
+
 
 
 
@@ -245,39 +244,6 @@ function calculateTotal(){
 }
 calculateTotal()
 
-// calcute total over ---------------------------------------------------------------------------->
-
-
-
-
-// function displayPaymentMethods(total,parentDiv){
-//     let div = document.createElement("div")
-//     let h3 = document.createElement("h3");
-//     h3.innerText = "PAY SECURELY"
-//     let paymentOptionDivHtml=`<div id="upi">
-//  <div id="">UPI</div>
-//  <div id="">Debit Card</div>
-//  <div id="">Credit Card</div>
-// </div>
-// <div id="displayUpi">
-//  <div id="upiPayment">UPI Payment</div>
-//  <div id="upiDetail">
-//      <p>*Clicking on “Pay” will take you to a secure payment gateway where you can enter the UPI Id 
-// and make your payment. Your order will not be completed without this action</p>
-//      <input type="checkbox">
-//      <label for="" id="terms">I agree to the Terms & Conditions</label>
-//      <div id="payAmountBtn">Pay Amount- Rs.${total}</div>
-//  </div>
-// </div>
-//     `
-//     div.innerHTML = paymentOptionDivHtml
-//     parentDiv.append(h3,div);
-
-    
-// let payAmountBtn=document.getElementById("payAmountBtn")
-// console.log(payAmountBtn)
-// payAmountBtn.addEventListener("click",alert_myOrdersPostRequestFunction)
-// }
 function displayPaymentMethods(total,parentDiv){
     let paymentOptionDivHtml=`
  <div id="paySecurely">
@@ -330,7 +296,7 @@ const PostoredrData = async()=>{
         order:loginData.order,
         address:loginData.address
      }
-     let url = `http://localhost:3000/profile/${loginData.id}`
+     let url = `https://reliance-create.herokuapp.com/profile/${loginData.id}`
      let postData = await fetch(url,{
         method:"PATCH",
         body:JSON.stringify(obj),
@@ -340,17 +306,6 @@ const PostoredrData = async()=>{
    } catch (error) {
      console.log(error)
    }
-}
-const DeleteData = async()=>{
-    try {
-        let loginData = JSON.parse(localStorage.getItem("usersData"))||{};
-        let url = `http://localhost:3000/profile/${loginData.id}`
-         let res = await fetch(url,{
-           method:"delete"
-        })
-    } catch (error) {
-        
-    }
 }
 function alert_myOrdersPostRequestFunction(){
     PostoredrData();

@@ -32,7 +32,7 @@ async function getData(url){
     }
 }
 async function roll1(){
-    let data=await getData(`http://localhost:3000/roll1`);
+    let data=await getData(`https://reliance-create.herokuapp.com/roll1`);
     // console.log(data);
     // let i=0;
     let hp2img=document.querySelector("#hp2img");
@@ -41,7 +41,7 @@ async function roll1(){
 }
 
 async function roll2(){
-    let data=await getData(`http://localhost:3000/roll2`);
+    let data=await getData(`https://reliance-create.herokuapp.com/roll2`);
     // console.log(data);
     let i=0;
     let hp2img=document.querySelector("#hp7img");
@@ -55,7 +55,7 @@ let ihp4=0;
 hp3();
 
 async function hp3(){
-    let data=await getData(`http://localhost:3000/laptop`);
+    let data=await getData(`https://reliance-create.herokuapp.com/laptop`);
     let key="laptop";
     console.log(data);
     let parent=document.querySelector("#hp3components");
@@ -66,7 +66,7 @@ async function hp3(){
 hp4();
 
 async function hp4(){
-    let data=await getData(`http://localhost:3000/appliances`);
+    let data=await getData(`https://reliance-create.herokuapp.com/appliances`);
     let key="appliances";
     console.log(data);
     let parent=document.querySelector("#hp4components");
@@ -74,7 +74,7 @@ async function hp4(){
 }
 
 document.querySelector("#hp3btnRight").addEventListener("click",async ()=>{
-    let data=await getData(`http://localhost:3000/laptop`);
+    let data=await getData(`https://reliance-create.herokuapp.com/laptop`);
     let parent=document.querySelector("#hp3components");
     let key="laptop";
     console.log(ihp3);
@@ -149,7 +149,7 @@ document.querySelector("#hp3btnRight").addEventListener("click",async ()=>{
 })
 
 document.querySelector("#hp3btnLeft").addEventListener("click",async ()=>{
-    let data=await getData(`http://localhost:3000/laptop`);
+    let data=await getData(`https://reliance-create.herokuapp.com/laptop`);
     let parent=document.querySelector("#hp3components");
     let key="laptop";
     console.log(ihp3);
@@ -224,7 +224,7 @@ document.querySelector("#hp3btnLeft").addEventListener("click",async ()=>{
 })
 
 document.querySelector("#hp4btnLeft").addEventListener("click",async ()=>{
-    let data=await getData(`http://localhost:3000/appliances`);
+    let data=await getData(`https://reliance-create.herokuapp.com/appliances`);
     let parent=document.querySelector("#hp4components");
     let key="appliances";
     console.log(ihp4);
@@ -299,7 +299,7 @@ document.querySelector("#hp4btnLeft").addEventListener("click",async ()=>{
 })
 
 document.querySelector("#hp4btnRight").addEventListener("click",async ()=>{
-    let data=await getData(`http://localhost:3000/appliances`);
+    let data=await getData(`https://reliance-create.herokuapp.com/appliances`);
     let parent=document.querySelector("#hp4components");
     let key="appliances";
     console.log(ihp4);
@@ -574,7 +574,7 @@ function dispData(data,parent,q,key){
 hp10();
 
 async function hp10(){
-    let data=await getData(`http://localhost:3000/watches`);
+    let data=await getData(`https://reliance-create.herokuapp.com/watches`);
     let key="watches";
     console.log(data);
     let parent=document.querySelector("#hp10components");
@@ -584,7 +584,7 @@ async function hp10(){
 hp12();
 
 async function hp12(){
-    let data=await getData(`http://localhost:3000/tvForHomePage`);
+    let data=await getData(`https://reliance-create.herokuapp.com/tvForHomePage`);
     let key="tvForHomePage";
     console.log(data);
     let parent=document.querySelector("#hp12components");
@@ -594,7 +594,7 @@ async function hp12(){
 hp11();
 
 async function hp11(){
-    let data=await getData(`http://localhost:3000/soundbar`);
+    let data=await getData(`https://reliance-create.herokuapp.com/soundbar`);
     let key="soundbar";
     console.log(data);
     let parent=document.querySelector("#hp11components");
@@ -602,7 +602,7 @@ async function hp11(){
 }
 
 document.querySelector("#hp10btnLeft").addEventListener("click",async ()=>{
-    let data=await getData(`http://localhost:3000/watches`);
+    let data=await getData(`https://reliance-create.herokuapp.com/watches`);
     let parent=document.querySelector("#hp10components");
     let key="watches";
     console.log(ihp10);
@@ -689,7 +689,7 @@ document.querySelector("#hp10btnLeft").addEventListener("click",async ()=>{
 })
 
 document.querySelector("#hp10btnRight").addEventListener("click",async ()=>{
-    let data=await getData(`http://localhost:3000/watches`);
+    let data=await getData(`https://reliance-create.herokuapp.com/watches`);
     let parent=document.querySelector("#hp10components");
     let key="watches";
     console.log(ihp10);
@@ -776,7 +776,7 @@ document.querySelector("#hp10btnRight").addEventListener("click",async ()=>{
 })
 
 document.querySelector("#hp11btnLeft").addEventListener("click",async ()=>{
-    let data=await getData(`http://localhost:3000/soundbar`);
+    let data=await getData(`https://reliance-create.herokuapp.com/soundbar`);
     let parent=document.querySelector("#hp11components");
     let key="soundbar";
     console.log(ihp11);
@@ -865,7 +865,7 @@ document.querySelector("#hp11btnLeft").addEventListener("click",async ()=>{
 })
 
 document.querySelector("#hp11btnRight").addEventListener("click",async ()=>{
-    let data=await getData(`http://localhost:3000/soundbar`);
+    let data=await getData(`https://reliance-create.herokuapp.com/soundbar`);
     let parent=document.querySelector("#hp11components");
     let key="soundbar";
     console.log(ihp11);
@@ -954,7 +954,7 @@ document.querySelector("#hp11btnRight").addEventListener("click",async ()=>{
 })
 
 document.querySelector("#hp12btnLeft").addEventListener("click",async ()=>{
-    let data=await getData(`http://localhost:3000/tvForHomePage`);
+    let data=await getData(`https://reliance-create.herokuapp.com/tvForHomePage`);
     let parent=document.querySelector("#hp12components");
     let key="tvForHomePage";
     console.log(ihp12);
@@ -1041,7 +1041,7 @@ document.querySelector("#hp12btnLeft").addEventListener("click",async ()=>{
 })
 
 document.querySelector("#hp12btnRight").addEventListener("click",async ()=>{
-    let data=await getData(`http://localhost:3000/tvForHomePage`);
+    let data=await getData(`https://reliance-create.herokuapp.com/tvForHomePage`);
     let parent=document.querySelector("#hp12components");
     let key="tvForHomePage";
     console.log(ihp12);

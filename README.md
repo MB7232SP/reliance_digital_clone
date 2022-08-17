@@ -4,7 +4,7 @@ This was our project for Unit-5 Construct week at Masai Shcool.
 Our target was to complete all main functionality of e-commerce website have, such as sing up to till to the byuing of a product.
 We have completed this project in 5 days.
 
-- [Click here](https://roaring-biscochitos-eb7254.netlify.app/pages/homepage) to see preview of our project.
+- [Click here](https://glistening-taffy-4f5efd.netlify.app) to see preview of our project.
 
 Reliance Digital is an Indian electronic products website and E-commerce platform for consumers involved in ordering online. Reliance Digital Retail is a chain of stores that sells consumer electronic appliances. Its products include audio and video devices, digital cameras, durables such as refrigerators, air conditioners, washing machines, microwave ovens, and water purifiers.
 

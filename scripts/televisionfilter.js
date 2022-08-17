@@ -412,7 +412,7 @@ click_size.addEventListener('click', showClicksize);
 
 let teldData = async () => {
   try {
-    let data = await telgetData('http://localhost:3000/television?_page1&_limit=20');
+    let data = await telgetData('https://reliance-create.herokuapp.com/television?_page1&_limit=20');
     displayTeldata(data);
     page2.style.backgroundColor = "white";
     page2.style.color = "black";
@@ -429,7 +429,7 @@ let teldData = async () => {
 
 let teldData2 = async () => {
   try {
-    let data = await telgetData('http://localhost:3000/television?_page=2&limit_20');
+    let data = await telgetData('https://reliance-create.herokuapp.com/television?_page=2&limit_20');
     displayTeldata(data);
     page1.style.backgroundColor = "white";
     page1.style.color = "black";
@@ -522,7 +522,7 @@ let discount_list = document.querySelectorAll('[name="discount"]');
  * 
  * *******************************/
 async function filter_data(minprice=0,maxprice=0) {
-  let url = 'http://localhost:3000/television?_page=1&_limit=20';
+  let url = 'https://reliance-create.herokuapp.com/television?_page=1&_limit=20';
   
   let brand_filter = check_box_val(brand_list, 'brand');
   let feature_filter = check_box_val(feature_list, 'feature');
@@ -601,7 +601,7 @@ short_filter.addEventListener('change',async function() {
 
 
 
-//http://localhost:3000/television?_sort=dealprice&_order=asc
+//https://reliance-create.herokuapp.com/television?_sort=dealprice&_order=asc
 
 
 
