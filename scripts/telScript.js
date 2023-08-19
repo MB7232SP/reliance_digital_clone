@@ -11,7 +11,7 @@ hp13.innerHTML=footer();
 
 let product = JSON.parse(localStorage.getItem('product'));
 
-let url = `https://reliance-create.herokuapp.com/${product.productKey}?&id=${product.productId}`
+let url = `https://reliance-json-server.onrender.com/${product.productKey}?&id=${product.productId}`
 
 
 let fetchData = async() =>{
@@ -90,7 +90,7 @@ function addToCartarr(product,key){
     location.href="cart.html";
   }
 async function addToCart(){
-    let url = `https://reliance-create.herokuapp.com/${product.productKey}?&id=${product.productId}`
+    let url = `https://reliance-json-server.onrender.com/${product.productKey}?&id=${product.productId}`
     let data = await telgetData(url);
      addToCartarr(data[0],product.productKey);
 }

@@ -296,7 +296,7 @@ const PostoredrData = async()=>{
         order:loginData.order,
         address:loginData.address
      }
-     let url = `https://reliance-create.herokuapp.com/profile/${loginData.id}`
+     let url = `https://reliance-json-server.onrender.com/profile/${loginData.id}`
      let postData = await fetch(url,{
         method:"PATCH",
         body:JSON.stringify(obj),
